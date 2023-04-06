@@ -1,5 +1,6 @@
 package org.ignacio.rios;
 
+import org.ignacio.rios.models.Categoria;
 import org.ignacio.rios.util.ConeccionBD;
 
 import javax.xml.transform.sax.SAXResult;
@@ -22,6 +23,7 @@ public class EjemploJDBC {
                 String nombre = rs.getString("nombre");
                 String id = rs.getString("id");
                 int precio= rs.getInt("precio");
+
                 resultados.add(nombre + "  |" + id+"|"+ precio);
             }
 

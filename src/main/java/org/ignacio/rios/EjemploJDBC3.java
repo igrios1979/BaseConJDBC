@@ -9,9 +9,9 @@ import org.ignacio.rios.util.ConeccionBD;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.Date;
-/*UPDATE*/
 
-public class EjemploJDBC2 {
+
+public class EjemploJDBC3 {
 
     public static void main(String[] args) {
 
@@ -21,15 +21,16 @@ public class EjemploJDBC2 {
             repositorio.lista().forEach(System.out::println);
             System.out.println("=========================|PORID||=========================");
             System.out.println(repositorio.porId(1L));
-            System.out.println("=========================|INSERTANDO|=========================");
+            System.out.println("=========================|UPDATE|=========================");
             Producto p = new Producto();
-                   // p.setId(1L);
-                    p.setNombre("jabon de tocador");
-                    p.setPrecio(12);
-                    p.setFechaRegistro(new Date());
-            Categoria cat = new Categoria();
-            cat.setId(4L);
-            p.setCategoria(cat);
+                    p.setId(1L);
+                    p.setNombre("Bicicleta");
+                    p.setPrecio(5621);
+            Categoria categoria = new Categoria();
+            categoria.setId(7L);
+            p.setCategoria(categoria);
+
+
             repositorio.guardar(p);
             System.out.println("Guardado OK " );
             repositorio.lista().forEach(System.out::println);
