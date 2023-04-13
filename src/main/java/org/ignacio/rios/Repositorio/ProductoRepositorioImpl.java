@@ -102,9 +102,10 @@ private Connection getConnection() throws SQLException {
         p.setNombre(rs.getString("nombre"));
         p.setPrecio(rs.getInt("precio"));
         p.setFechaRegistro(rs.getDate("fecha"));
+
         Categoria categoria = new Categoria();
-        categoria.setId(rs.getLong("categoria_id"));
-        categoria.setNombre(rs.getString("cat"));
+            categoria.setId(rs.getLong("categoria_id"));
+            categoria.setNombre(rs.getString("cat"));
          p.setCategoria(categoria);
         return p;
     }
